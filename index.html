@@ -179,7 +179,7 @@
       <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me</span></h2>
 
-    <form action="#">
+    <!-- <form action="#">
         <div class="input-box">
             <input type="text" placeholder="Full Name">
             <input type="email" placeholder="Email Address">
@@ -191,7 +191,28 @@
         <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
         <input type="submit" value="Send Message" class="btn">
     </form>
-</section>
+</section> -->
+
+<form action="https://api.web3forms.com/submit" method="POST">
+    <!-- Your Access Key -->
+    <input type="hidden" name="access_key" value='7ab74032-ec51-4576-91d0-69c25d9782cd'>
+
+    <div class="input-box">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+    </div>
+    <div class="input-box">
+        <input type="number" name="phone" placeholder="Mobile Number" required>
+        <input type="text" name="subject" placeholder="Email Subject" required>
+    </div>
+    <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+    
+    <!-- Redirect after submit -->
+    <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you.html">
+
+    <input type="submit" value="Send Message" class="btn">
+</form>
+
 
 <!-- footer -->
 
